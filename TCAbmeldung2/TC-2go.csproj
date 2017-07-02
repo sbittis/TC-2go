@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B449FA80-7929-4E43-85B7-B7A217AF060A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCAbmeldung2</RootNamespace>
+    <AssemblyName>TC-2go</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Sebastian\Documents\Juki\TC-IT\Release\v3_0\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>de</TargetCulture>
+    <ProductName>TC-2go</ProductName>
+    <PublisherName>Sebastian Bittis - Jugendkirche Soest</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>3.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>679F56F66E899817EE3B50F2FB42D2E0F0E7272D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TCAbmeldung2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tc2go_klein.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fachkonzept\Behandlung.cs" />
+    <Compile Include="Fachkonzept\ListViewTools\ListViewButtonColumn.cs" />
+    <Compile Include="Fachkonzept\ListViewTools\ListViewColumn.cs" />
+    <Compile Include="Fachkonzept\ListViewTools\ListViewColumnMouseEventArgs.cs" />
+    <Compile Include="Fachkonzept\ListViewTools\ListViewColumnSorter.cs" />
+    <Compile Include="Fachkonzept\ListViewTools\ListViewExtender.cs" />
+    <Compile Include="Fachkonzept\Person.cs" />
+    <Compile Include="Fachkonzept\Teamer.cs" />
+    <Compile Include="Fachkonzept\Teilnehmer.cs" />
+    <Compile Include="Fachkonzept\Transaktion.cs" />
+    <Compile Include="GUI\BehandlungFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BehandlungFenster.Designer.cs">
+      <DependentUpon>BehandlungFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InfobeamerFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InfobeamerFenster.Designer.cs">
+      <DependentUpon>InfobeamerFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Teamerliste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Teamerliste.Designer.cs">
+      <DependentUpon>Teamerliste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Gesamtliste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Gesamtliste.Designer.cs">
+      <DependentUpon>Gesamtliste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Hauptfenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Hauptfenster.Designer.cs">
+      <DependentUpon>Hauptfenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HistoryFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HistoryFenster.Designer.cs">
+      <DependentUpon>HistoryFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InfoFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InfoFenster.Designer.cs">
+      <DependentUpon>InfoFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Kommentar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Kommentar.Designer.cs">
+      <DependentUpon>Kommentar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoadBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoadBox.Designer.cs">
+      <DependentUpon>LoadBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManuellFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManuellFenster.Designer.cs">
+      <DependentUpon>ManuellFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NameBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NameBox.Designer.cs">
+      <DependentUpon>NameBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SaniFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SaniFenster.Designer.cs">
+      <DependentUpon>SaniFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ScannenFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ScannenFenster.Designer.cs">
+      <DependentUpon>ScannenFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SchliessenFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SchliessenFenster.Designer.cs">
+      <DependentUpon>SchliessenFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TeilnehmerFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TeilnehmerFenster.Designer.cs">
+      <DependentUpon>TeilnehmerFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TnNameBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TnNameBox.Designer.cs">
+      <DependentUpon>TnNameBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Zeltauswahl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Zeltauswahl.Designer.cs">
+      <DependentUpon>Zeltauswahl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ZeltFenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ZeltFenster.Designer.cs">
+      <DependentUpon>ZeltFenster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Zugangskontrolle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Zugangskontrolle.Designer.cs">
+      <DependentUpon>Zugangskontrolle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistenz\CSVHandler.cs" />
+    <Compile Include="Persistenz\FileWriter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="GUI\BehandlungFenster.resx">
+      <DependentUpon>BehandlungFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InfobeamerFenster.resx">
+      <DependentUpon>InfobeamerFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Teamerliste.resx">
+      <DependentUpon>Teamerliste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Gesamtliste.resx">
+      <DependentUpon>Gesamtliste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Hauptfenster.resx">
+      <DependentUpon>Hauptfenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HistoryFenster.resx">
+      <DependentUpon>HistoryFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InfoFenster.resx">
+      <DependentUpon>InfoFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Kommentar.resx">
+      <DependentUpon>Kommentar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoadBox.resx">
+      <DependentUpon>LoadBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManuellFenster.resx">
+      <DependentUpon>ManuellFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NameBox.resx">
+      <DependentUpon>NameBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SaniFenster.resx">
+      <DependentUpon>SaniFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ScannenFenster.resx">
+      <DependentUpon>ScannenFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SchliessenFenster.resx">
+      <DependentUpon>SchliessenFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TeilnehmerFenster.resx">
+      <DependentUpon>TeilnehmerFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TnNameBox.resx">
+      <DependentUpon>TnNameBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Zeltauswahl.resx">
+      <DependentUpon>Zeltauswahl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ZeltFenster.resx">
+      <DependentUpon>ZeltFenster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Zugangskontrolle.resx">
+      <DependentUpon>Zugangskontrolle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TC-2go_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\tc2go_gross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\tc2go_klein.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\File_Delete.png" />
+    <None Include="resources\File_edit.png" />
+    <None Include="resources\Surgeon1.png" />
+    <None Include="resources\Tent-01.png" />
+    <None Include="resources\User-Group.png" />
+    <None Include="resources\Hand-03.png" />
+    <Content Include="tc2go_klein.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

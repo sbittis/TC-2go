@@ -1,0 +1,188 @@
+<html>
+<head>
+	<title>TC-2go ReadMe</title>
+	<style>
+		table { border: 4px solid black;
+				background-color: #EDFEAA;
+				border-collapse: collapse;
+		}
+		td, th {border: 2px solid black;
+				padding: 3px;
+		}
+	</style>
+</head>
+<body>
+	<h1>TC-2go ReadMe</h1>
+	
+	<h3>Installation</h3>
+	<p>Die Anwendung wird über die bereitgestellte <em>setup.exe</em> installiert. <em>setup.exe</em> ausführen und die Anweisungen des Installationsdialogs befolgen.</p>
+	
+	<h3>Datenverwaltung</h3>
+	<p>
+		Die Anwendung benötigt die Daten als <em>komma-separierte</em> CSV-Dateien. Diese können zum Beispiel mit Excel erstellt werden (<em>Export als CSV</em>). Die Daten zu verschiedenen Typen werden in jeweils einer Datei gespeichert. Es werden also folgende Dateien benötigt:
+		<ul>
+			<li>Teilnehmerdaten</li>
+			<li>Teamerdaten</li>
+			<li>Sanidaten</li>
+			<li>Verlaufsdaten</li>
+		</ul>
+		Die jeweiligen Dateien müssen den im folgenden beschriebenen Strukturen <em>in genannter Reihenfolge</em> genügen:
+	</p>
+	
+	<h4>Teilnehmerdaten</h4>
+	<p>
+		<table>
+			<tr>
+				<th>Spaltenname</th>
+				<th>Inhalt</th>
+				<th>Zu beachten</th>
+			</tr>
+			<tr>
+				<td>id</td>
+				<td>Lfd. Nummer, eindeutige Nummer des Teilnehmers</td>
+				<td>Zwischen 1000 und 9999</td>
+			</tr>
+			<tr>
+				<td>nachname</td>
+				<td>Nachname des Teilnehmers</td>
+				<td>Zeichenkette</td>
+			</tr>
+			<tr>
+				<td>vorname</td>
+				<td>Vorname des Teilnehmers</td>
+				<td>Zeichenkette</td>
+			</tr>
+			<tr>
+				<td>gemeinde</td>
+				<td>Gemeinde des Teilnehmers</td>
+				<td>Zeichenkette</td>
+			</tr>
+			<tr>
+				<td>zeltnr</td>
+				<td>Zeltnummer des Teilnehmers</td>
+				<td>ganze Zahl</td>
+			</tr>
+			<tr>
+				<td>abwesend</td>
+				<td>0</td>
+				<td>hier wird später eingetragen, wenn ein Teilnehmer abwesend ist</td>
+			</tr>
+			<tr>
+				<td>kommentar</td>
+				<td>ggf. Kommentar zum Teilnehmer</td>
+				<td>Zeichenkette</td>
+			</tr>
+		</table>
+	</p>
+	
+	<h4>Teamerdaten</h4>
+	<p>
+		<table>
+			<tr>
+				<th>Spaltenname</th>
+				<th>Inhalt</th>
+				<th>Zu beachten</th>
+			</tr>
+			<tr>
+				<td>id</td>
+				<td>Lfd. Nummer, eindeutige Nummer des Teilnehmers</td>
+				<td>Zwischen 1000 und 9999</td>
+			</tr>
+			<tr>
+				<td>nachname</td>
+				<td>Nachname des Teilnehmers</td>
+				<td>Zeichenkette</td>
+			</tr>
+			<tr>
+				<td>vorname</td>
+				<td>Vorname des Teilnehmers</td>
+				<td>Zeichenkette</td>
+			</tr>
+			<tr>
+				<td>zeltnr</td>
+				<td>Zeltnummer des Teilnehmers</td>
+				<td>ganze Zahl</td>
+			</tr>
+		</table>
+	</p>
+	
+	<h4>Sanidaten</h4>
+	<p>
+		<em>Hier muss einfach mit dem Windows-Editor eine leere CSV-Datei angelegt werden. Die Struktur wird im folgenden trotzdem beschrieben.</em>
+		<table>
+			<tr>
+				<th>Spaltenname</th>
+				<th>Inhalt</th>
+				<th>Zu beachten</th>
+			</tr>
+			<tr>
+				<td>erfasst</td>
+				<td>Zeitpunkt der Erfassung</td>
+				<td>formatierter Datumswert</td>
+			</tr>
+			<tr>
+				<td>patient</td>
+				<td>ID des behandelten Patienten</td>
+				<td>ganze Zahl zwischen 100 und 9999</td>
+			</tr>
+			<tr>
+				<td>arzt</td>
+				<td>ID des behandelnden Sanitäters</td>
+				<td>ganze Zahl zwischen 100 und 999</td>
+			</tr>
+			<tr>
+				<td>text1</td>
+				<td>Symptome des Patienten</td>
+				<td>Zeichenkette</td>
+			</tr>
+			<tr>
+				<td>text2</td>
+				<td>durchgeführte Behandlung</td>
+				<td>Zeichenkette</td>
+			</tr>
+		</table>
+	</p>
+	
+	<h4>Verlaufsdaten</h4>
+	<p>
+		<em>Hier muss einfach mit dem Windows-Editor eine leere CSV-Datei angelegt werden. Die Struktur wird im folgenden trotzdem beschrieben.</em>
+		<table>
+			<tr>
+				<th>Spaltenname</th>
+				<th>Inhalt</th>
+				<th>Zu beachten</th>
+			</tr>
+			<tr>
+				<td>abmeldung</td>
+				<td>0 oder 1</td>
+				<td>Indikator, ob ein Teilnehmer an- oder abgemeldet wurde.</td>
+			</tr>
+			<tr>
+				<td>datum</td>
+				<td>Datum der An- oder Abmeldung</td>
+				<td>formatierter Datumswert</td>
+			</tr>
+			<tr>
+				<td>zeit</td>
+				<td>Uhrzeit der An- oder Abmeldung</td>
+				<td>formatierter Zeitwert</td>
+			</tr>
+			<tr>
+				<td>tn</td>
+				<td>ID des an- oder abgemeldeten Teilnehmers</td>
+				<td>ganze Zahl zwischen 1000 und 9999</td>
+			</tr>
+			<tr>
+				<td>teamer</td>
+				<td>ID des an- oder abmeldenden Teamers</td>
+				<td>ganze Zahl zwischen 100 und 999</td>
+			</tr>
+		</table>
+	</p>
+	
+	<h3>Erster Start der Anwendung</h3>
+	<p>
+		Beim ersten Start der Anwendung wird der Benutzer gebeten, die Speicherorte der oben genannten Dateien nacheinander anzugeben.
+	</p>
+</body>
+</html>
