@@ -1,4 +1,4 @@
-# TC-2go_3
+# TC-2go
 
 TC-2go ist eine Anwendung zur Verwaltung von Teilnehmern auf Jugendfreizeiten. Insbesondere können Teilnehmer, die das Gelände temporär verlassen, ab- und später wieder angemeldet werden. Außerdem können Behandlungen von Sanitätern erfasst und verwaltet werden. Dazu sind Namensschilder für jeden Teilnehmer und Teamer notwendig, die jeweils einen Barcode mit einer eindeutigen ID enthalten, sowie ein Barcode-Scanner, der mit der Anwendung verbunden wird. Zum Erstellen der Barcodes kann die Schriftart [Code39](http://www.logitogo.com/html/barcode39_erstellen.html) verwendet werden. **Es wird empfohlen, das Programm mit einem Touchscreen zu verwenden. Die Bedienung mit einer Maus ist aber auch möglich.**
 
@@ -35,6 +35,7 @@ zeltnr | Zeltnummer des Teilnehmers | ganze Zahl
 
 ### Sanidaten
 *Hier muss einfach mit dem Windows-Editor eine leere CSV-Datei angelegt werden. Die Struktur wird im folgenden trotzdem beschrieben.*
+
 Spaltenname | Inhalt | Zu beachten
 ----------- | ------ | -----------
 erfasst | Zeitpunkt der Erfassung | formatierter Datumswert
@@ -45,6 +46,7 @@ text2 | durchgeführte Behandlung | Zeichenkette
 
 ### Verlaufsdaten
 *Hier muss einfach mit dem Windows-Editor eine leere CSV-Datei angelegt werden. Die Struktur wird im folgenden trotzdem beschrieben.*
+
 Spaltenname | Inhalt | Zu beachten
 ----------- | ------ | -----------
 abmeldung | 0 oder 1 | Indikator, ob ein Teilnehmer an- oder abgemeldet wurde.
