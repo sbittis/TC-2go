@@ -53,7 +53,6 @@ namespace TCAbmeldung2.GUI
             anwesendeTeilnehmer.Add(new Teilnehmer(1008, "McDonald", "Ronald", 6));
             anwesendeTeilnehmer.Add(new Teilnehmer(1009, "Pofalla", "Ronald", 5));
             anwesendeTeilnehmer.Add(new Teilnehmer(1010, "Bosch", "Hermann", 1));
-            anwesendeTeilnehmer.Add(new Teilnehmer(1011, "Kim", "Jong-un", 15));
             anwesendeTeilnehmer.Add(new Teilnehmer(1012, "Bohlen", "Dieter", 14));
             anwesendeTeilnehmer.Add(new Teilnehmer(1013, "Neumeier", "Petry", 22));*/
         }
